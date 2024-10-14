@@ -969,7 +969,7 @@ const Body: React.FC<IProps> = () => {
                                       color="text.secondary"
                                       gutterBottom
                                     >
-                                      Progress
+                                      Minted
                                     </Typography>
                                     <Typography variant="h6" component="div">
                                         {retrievedContractData.totalSupply}{"/"}{retrievedContractData.address != LadiesLvl3Contract.address ? retrievedContractData.collectionSize : "?"}
@@ -984,7 +984,7 @@ const Body: React.FC<IProps> = () => {
                                         color="text.secondary"
                                         gutterBottom
                                       >
-                                        Public
+                                        Public Price
                                       </Typography>
                                       <Typography variant="h5" component="div">
                                         {retrievedContractData.publicCost}
