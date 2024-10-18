@@ -128,6 +128,19 @@ const Body: React.FC<IProps> = () => {
 
   const [buyOptions, setBuyOptions] = React.useState<IPropsBuy>(defaultBuyProps);
 
+  const freeMintMap = new Map([
+    ['R1', 1],
+    ['R2', 2],
+    ['R3', 3],
+    ['R4', 4],
+    ['R5', 5],
+    ['RR1', 1],
+    ['RR2', 2],
+    ['RR3', 3],
+    ['RR4', 4],
+    ['RR5', 5]
+]);
+
   React.useEffect(() => {
     if (defaultContract.name !== contractObject.name) {
       setIsLoading(true);
@@ -593,9 +606,24 @@ const Body: React.FC<IProps> = () => {
           );
         }
 
+        let freeMintValue = 1;
+
+        if(ipfsMetadata && convertedChosenTokenList[0]){
+          const attributes = ipfsMetadata.get(convertedChosenTokenList[0])?.attributes;
+          if(attributes){
+            for (let i = 0; i < attributes?.length; i++) {
+              if(attributes[i].trait_type == "Rare"){
+                if(attributes[i].value && freeMintMap.has(attributes[i].value)){
+                  freeMintValue = freeMintMap.get(attributes[i].value) ?? 1;
+                }
+              }
+            }
+          }
+        }
+
         const txResponse = await ownerContract.upsertValueInWlMap(
           state.wallet.address,
-          wlSpots + 1
+          wlSpots + freeMintValue
         );
         let toastNotification: any;
 
@@ -1276,7 +1304,7 @@ const Body: React.FC<IProps> = () => {
                                 variant="contained"
                                 onClick={() => sendMultipleNftsWithLoading()}
                                 disabled={
-                                  isLoading ||
+                                  isLoading || retrievedContractData.address == LadiesLvl2Contract.address ||
                                   chosenTokenList.length != allowedLength
                                 }
                               >
