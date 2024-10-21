@@ -62,6 +62,7 @@ export const getRealTokens = async(
 ): Promise<string[]> => {
 
   let realTokens = Array.from( tokenMap.keys() );
+  realTokens.sort((a, b) => parseInt(a) - parseInt(b));
   return realTokens;
 }
 
