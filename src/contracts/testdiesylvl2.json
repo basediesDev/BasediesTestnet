@@ -10,11 +10,11 @@
     "publicCost": 10,
     "wlCost": 0,
     "startDate": "06/15/2023 18:00",
-    "description": "Collection 7000 nfts. Swap Triads fo Premium.",
+    "description": "Collection features 4,500 NFTs, including 1,500 identical triplets!\nCollect three identical TRIADS, and you can claim between 1 to 5 free mints from the PREMIUM collection.\nCheck your triplets and exchange them for free mints in the MY NFTS section on our website.\nFor more detailed information, please refer to the DOCS.",
     "bgcolor": "#8a11e2",
     "bgcolor2": "#000000",
-    "imagePath": "./edition2.jpg",
-    "gifPath": "./edition2.jpg",
+    "imagePath": "./part2.gif",
+    "gifPath": "./part2.gif",
     "abi": [
     {
       "inputs": [

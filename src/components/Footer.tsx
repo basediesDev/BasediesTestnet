@@ -45,21 +45,14 @@ const Footer: React.FC<IProps> = () => {
               <Grid item xs={6} sm={6} md={6}>
                 <Box sx={{ textAlign: "right", m: 2 }}>
                   <Typography>
-                    <a href="https://google.com" target="blank">
+                    <a href="https://basedies.gitbook.io/" target="blank">
                       <img
                         src="./gitbookicon.svg"
                         style={{ height: "25px" }}
                       ></img>
                     </a>
                     &nbsp;
-                    <a href="https://google.com" target="blank">
-                      <img
-                        src="./discordicon.svg"
-                        style={{ height: "25px" }}
-                      ></img>
-                    </a>
-                    &nbsp;
-                    <a href="https://google.com" target="blank">
+                    <a href="https://x.com/Basedieseth" target="blank">
                       <img
                         src="./twittericon.svg"
                         style={{ height: "25px" }}

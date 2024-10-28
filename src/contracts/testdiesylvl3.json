@@ -10,11 +10,11 @@
     "publicCost": 10,
     "wlCost": 0,
     "startDate": "06/15/2023 18:00",
-    "description": "Premium Collection",
+    "description": "Soon, you'll learn more about the upcoming PREMIUM collection—this is the ultimate goal of the entire exciting journey! Expect something truly exceptional, where Basedies holders will have the opportunity to influence many key aspects of this collection.",
     "bgcolor": "#8a11e2",
     "bgcolor2": "#000000",
-    "imagePath": "./edition2.jpg",
-    "gifPath": "./edition2.jpg",
+    "imagePath": "./part3.jpg",
+    "gifPath": "./part3.jpg",
     "abi": [
     {
       "inputs": [

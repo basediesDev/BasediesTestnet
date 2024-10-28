@@ -50,7 +50,8 @@ const Header: React.FC<IProps> = () => {
                 LinkComponent={Link}
                 href="/"
               >
-                <FemaleIcon />
+
+                <img src="./output_1.png" alt="custom icon" style={{ width: 24, height: 24 }} />
               </IconButton>
               <Typography
                 variant="h6"

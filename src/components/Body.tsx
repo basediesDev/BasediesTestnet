@@ -249,6 +249,7 @@ const Body: React.FC<IProps> = () => {
         maxPerTx: contract.max_per_transaction,
         imagePath: contract.imagePath,
         gifPath: contract.gifPath,
+        address: contract.address
       }));
     }
 
@@ -899,7 +900,7 @@ const Body: React.FC<IProps> = () => {
 
   const handleDocsClick = (event: React.MouseEvent) => {
     event.preventDefault(); // Zapobiegamy zmianie zakładki
-    window.open('https://google.com', '_blank'); // Otwieramy link w nowej karcie
+    window.open('https://basedies.gitbook.io/whitepaper-new', '_blank'); // Otwieramy link w nowej karcie
   };
 
   return (
@@ -965,7 +966,8 @@ const Body: React.FC<IProps> = () => {
                              }}>
                               <CardContent>
                                 <Typography variant="h5" >
-                                  Mint {retrievedContractData.name}
+                                  {retrievedContractData.address == LadiesLvl1Contract.address ? "BASEDIES TWINS" :
+                                  (retrievedContractData.address == LadiesLvl2Contract.address ? "BASEDIES TRIADS" : "BASEDIES PREMIUM")}
                                 </Typography>
                                 <Typography
                                   sx={{ mb: 1.5 }}
